@@ -96,7 +96,7 @@ const images = [
 export default function IndustriesEmpower() {
   return (
     <section className="w-full">
-      <div className="w-[90%] bg-[url('bg.jpg')] bg-cover bg-center p-10 md:p-20 rounded-[70px] overflow-hidden flex flex-col gap-5 md:gap-10 m-auto">
+      <div className="w-[90%] bg-[url('/bg.jpg')] bg-cover bg-center p-10 md:p-20 rounded-[70px] overflow-hidden flex flex-col gap-5 md:gap-10 m-auto">
         <h2 className="text-white text-4xl lg:text-6xl font-semibold">
           Industries We <span className="block text-[#65b0ff]">Empower</span>
         </h2>
