@@ -59,7 +59,7 @@ export const AllBlogsPage = ({ blogs = [] }) => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12">
+    <div className="max-w-7xl my-15 mx-auto px-4 py-12">
       {/* Header */}
       <div className="text-center max-w-full mx-auto mb-8">
         <h2 className="text-3xl font-extrabold text-gray-900 mb-2">
