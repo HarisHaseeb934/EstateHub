@@ -22,7 +22,7 @@ const NavOp = ({ stylesDiff, pWrapper }) => {
                 {navOp.map((op) => {
                     const isActive = pathname === op.ref
                     return (
-                        <li key={op.name}  className="text-white" onClick={() => setOpActive(op.name)}>
+                        <li key={op.name}  className="text-white" >
                             <Link href={op.ref} className='group cursor-default'>
                                 <span className='relative text-md'>
                                     {op.name}
@@ -30,7 +30,7 @@ const NavOp = ({ stylesDiff, pWrapper }) => {
                                 </span>
                             </Link>
                         </li>
-                    )
+                    )   
                 })
                 }
             </ul>

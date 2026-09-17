@@ -4,6 +4,7 @@ import NewsArticles from '@/components/sections/NewsArticles'
 import PropertiesSection from '@/components/sections/PropertiesSection'
 import Testimonials from '@/components/sections/Testimonials'
 import React from 'react'
+import IndustriesEmpower from '../components/sections/IndutriesEmpower'
 
 const page = () => {
 
@@ -86,7 +87,7 @@ const page = () => {
             <PropertiesSection variant='sale' properties={rentPropertiesData} description='Explore our handpicked properties for sale and find the perfect space to call your own. Quality homes. Great locations. Better living.' />
 
             <PropertiesSection variant='rent' properties={salePropertiesData} heading='Properties For Rent' description='Explore our handpicked properties for sale and find the perfect space to call your own. Quality homes. Great locations. Better living.' />
-            
+          <IndustriesEmpower />
             <NewsArticles variant='dark' />
             <Testimonials />
         </main>
