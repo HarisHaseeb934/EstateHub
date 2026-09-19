@@ -14,7 +14,7 @@ const Navbar = () => {
   const lastScrollY = useRef(0);
   const pathname = usePathname();
 
-  let isSolid = pathname === "/blogs" || pathname === "/allblogs";
+  let isSolid = pathname === "/blogs" || pathname === "/allblogs" || pathname === "/blogin";
 
   useEffect(() => {
     const handleNav = () => {
