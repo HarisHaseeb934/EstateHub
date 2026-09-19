@@ -106,7 +106,7 @@ const images = [
 export default function IndustriesEmpower() {
   return (
     <section className="w-full bg-brand-accent py-14 px-4 sm:px-6 lg:px-10">
-      <div className="mx-auto max-w-[1400px]">
+      <div className="mx-auto max-w-310">
         <div className="mb-8 max-w-3xl">
           <h2 className="text-white text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05]">
             Industries We <span className="block text-[#65b0ff]">Empower</span>

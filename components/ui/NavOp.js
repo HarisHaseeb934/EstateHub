@@ -13,7 +13,6 @@ const NavOp = ({ stylesDiff, pWrapper }) => {
         { name: 'About Us', ref: '/about' },
         { name: 'Services', ref: '/services' },
         { name: 'Blog', ref: '/blogs' },
-        { name: 'Contact', ref: '/contact' }
     ];
 
     return (
@@ -23,7 +22,7 @@ const NavOp = ({ stylesDiff, pWrapper }) => {
                     const isActive = pathname === op.ref
                     return (
                         <li key={op.name}  className="text-white" >
-                            <Link href={op.ref} className='group cursor-default'>
+                            <Link href={op.ref} className='group cursor-pointer'>
                                 <span className='relative text-md'>
                                     {op.name}
                                     <span className={`${isActive ? 'w-full' : 'w-0'}  bg-brand-text  absolute h-0.5 block -bottom-1 duration-200 group-hover:w-full transition-all`}></span>

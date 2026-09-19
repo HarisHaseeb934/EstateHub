@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import Button from "../ui/Button";
 import NavOp from "../ui/NavOp";
 
@@ -50,32 +51,34 @@ const Navbar = () => {
     >
       <header
         className={`w-full flex justify-center transition-all  duration-500 z-50 ${showNavColor ? `${isSolid ? "bg-brand-navy" : "bg-black/30 backdrop-blur-md "}` : `${isSolid ? "bg-brand-navy" : "bg-transparent backdrop-blur-xs"}`}`}
-      > 
-      {/* ${showNavColor ? "bg-black/30 backdrop-blur-md " : "bg-transparent backdrop-blur-xs"}  */}
+      >
+        {/* ${showNavColor ? "bg-black/30 backdrop-blur-md " : "bg-transparent backdrop-blur-xs"}  */}
         <nav className="max-w-310 w-full min-h-20 px-5 flex justify-between items-center relative">
           {/* <span className="text-white bg-brand-navy relative flex justify-center shadow-[0_2px_4px_rgba(0,0,0,0.05),0_12px_24px_rgba(0,0,0,0.5)] items-center border rounded-full px-1">
                             <Home className="absolute text-brand-darkGold z-0 " size={45} />
                             <span className="sm:text-2xl text-xl relative z-10 font-syne font-bold">Restate</span>
                         </span> */}
 
-          <div className="flex items-center gap-2 text-white font-bold text-xl">
-            <div className="flex items-center justify-center w-8 h-8 rounded-lg border border-slate-700 bg-brand-darkGold">
-              <HiOutlineHome className="w-5 h-5 text-white" />
+          <Link href={'/'} className="cursor-pointer">
+            <div className="flex items-center gap-2 text-white font-bold text-xl">
+              <div className="flex items-center justify-center w-8 h-8 rounded-lg border border-slate-700 bg-brand-darkGold">
+                <HiOutlineHome className="w-5 h-5 text-white" />
+              </div>
+              <span>EstateHub</span>
             </div>
-            <span>EstateHub</span>
-          </div>
+          </Link>
 
           <div className="hidden mx-auto w-fit absolute min-[865px]:flex inset-x-0 items-center justify-center">
             <NavOp stylesDiff={" "} />
           </div>
 
           <div className="flex  items-center gap-2  text-brand-text">
-            <Button
+            <Link href={'/contact'}><Button
               content={"Contact Us"}
               colors={
                 "text-brand-text hidden sm:flex hover:bg-transparent hover:[text-shadow:0_2px_4px_rgba(0,0,0,1.5)]  hover:border-brand-text bg-brand-darkGold border-brand-darkGold"
               }
-            />
+            /></Link>
             <div
               className="hidden justify-center transition-colors items-center max-[865px]:flex hover:bg-brand-accent gap-1.5 flex-col px-2 py-3 rounded"
               onClick={() => setShowMenu(!showMenu)}

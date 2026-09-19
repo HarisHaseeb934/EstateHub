@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link';
 import { 
   FaFacebookF, 
   FaInstagram, 
@@ -19,12 +20,12 @@ const Footer = () => {
           
           {/* Brand Info */}
           <div className="lg:col-span-1 space-y-4">
-            <div className="flex items-center gap-2 text-white font-bold text-xl">
+            <Link href="/" className="flex items-center gap-2 text-white font-bold text-xl hover:text-white transition-colors">
               <div className="flex items-center justify-center w-8 h-8 rounded-lg border border-slate-700 bg-slate-900">
                 <HiOutlineHome className="w-5 h-5 text-white" />
               </div>
               <span>EstateHub</span>
-            </div>
+            </Link>
             <p className="text-md text-slate-400 leading-relaxed">
               We help you find the perfect property to call home. Your trusted real estate partner.
             </p>
@@ -51,12 +52,12 @@ const Footer = () => {
             <div>
               <h3 className="text-white font-semibold text-lg mb-4">Quick Links</h3>
               <ul className="space-y-2.5 text-xs sm:text-sm">
-                <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Properties</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Services</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+                <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+                <li><Link href="/properties" className="hover:text-white transition-colors">Properties</Link></li>
+                <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+                <li><Link href="/services" className="hover:text-white transition-colors">Services</Link></li>
+                <li><Link href="/blogs" className="hover:text-white transition-colors">Blog</Link></li>
+                <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
               </ul>
             </div>
 
