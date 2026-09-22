@@ -63,7 +63,6 @@ export default function BlogSection() {
   return (
     <section className="max-w-7xl my-15 mx-auto px-4 py-12 bg-slate-50/50">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        {/* Left Column: Featured Post */}
         <div className="lg:col-span-7 flex flex-col">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
             Featured Post
@@ -71,7 +70,6 @@ export default function BlogSection() {
           <FeaturedPost post={featuredData} />
         </div>
 
-        {/* Right Column: All Posts */}
         <div className="lg:col-span-5">
           <AllPosts posts={postsData} />
         </div>

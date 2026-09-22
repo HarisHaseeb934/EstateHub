@@ -7,7 +7,7 @@ export const AllPosts = ({ posts }) => {
       <div className="flex items-center justify-between pb-2 border-b border-gray-100">
         <h2 className="text-2xl font-bold text-gray-900">All Posts</h2>
         <a
-          href="#"
+          href="/allblogs"
           className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-brand-darkGold border border-gray-200 rounded-full px-4 py-1.5 hover:border-brand-darkGold transition-all"
         >
           View All
@@ -20,7 +20,7 @@ export const AllPosts = ({ posts }) => {
           <Link
             key={post.id}
             className="py-4 bg-[#F7F8F9] group cursor-pointer hover:bg-amber-200 rounded-3xl p-7"
-            href={"/"}
+            href={"/blogs/1"}
           >
             <h3 className="text-md font-bold text-gray-900 group-hover:text-brand-darkGold transition-colors leading-snug mb-2">
               {post.title}
