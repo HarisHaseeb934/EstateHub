@@ -37,7 +37,7 @@ const Hero = () => {
                     Find a Place You'll<br /> Love to Live
                 </p>
                 <p className='text-brand-text font-nunito [text-shadow:0_2px_4px_rgba(0,0,0,2.5)] hidden sm:flex'>Discover luxury homes, appartments and commercials <br /> properties for rent sale in prime locations</p>
-                <Button content={'Explore Properties'} colors={'text-brand-text bg-brand-navy hover:[text-shadow:0_2px_4px_rgba(0,0,0,1.5)]  border-brand-navy hover:bg-transparent hover:border-brand-text'} />
+                <Button content={'Explore Properties'} colors={'text-brand-text cursor-pointer bg-brand-navy hover:[text-shadow:0_2px_4px_rgba(0,0,0,1.5)]  border-brand-navy hover:bg-transparent hover:border-brand-text'} />
 
                 <div className='w-full max-w-310 mx-auto mt-3 bg-brand-text/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4 md:p-6'>
 
@@ -45,7 +45,7 @@ const Hero = () => {
                     <div className='flex gap-2 mb-4 border-b border-white/10 pb-4'>
                         <button
                             onClick={() => setActiveTab('rent')}
-                            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-nunito transition-all ${activeTab === 'rent' ? 'bg-brand-navy text-white' : 'text-white/70 hover:text-white'
+                            className={`flex items-center gap-2 px-4 cursor-pointer py-2 rounded-lg text-sm font-nunito transition-all ${activeTab === 'rent' ? 'bg-brand-navy text-white' : 'text-white/70 hover:text-white'
                                 }`}
                         >
                             <Key size={16} />
@@ -53,7 +53,7 @@ const Hero = () => {
                         </button>
                         <button
                             onClick={() => setActiveTab('sale')}
-                            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-nunito transition-all ${activeTab === 'sale' ? 'bg-brand-navy text-white' : 'text-white/70 hover:text-white'
+                            className={`flex items-center gap-2 cursor-pointer px-4 py-2 rounded-lg text-sm font-nunito transition-all ${activeTab === 'sale' ? 'bg-brand-navy text-white' : 'text-white/70 hover:text-white'
                                 }`}
                         >
                             <Home size={16} />
@@ -120,7 +120,7 @@ const Hero = () => {
 
                         <div className='flex flex-col gap-1.5 col-span-1'>
                             <label className='text-xs uppercase tracking-wide text-white/60 font-nunito'>Bedrooms</label>
-                            <div className='flex items-center justify-between gap-2 border border-white/20 rounded-lg px-3 py-2 relative'>
+                            <div className='flex items-center  justify-between gap-2 border border-white/20 rounded-lg px-3 py-2 relative'>
                                 <BedDouble size={16} className='text-white/60 shrink-0' />
                                 <select
                                     value={bedrooms}
@@ -154,7 +154,7 @@ const Hero = () => {
 
                         <button
                             onClick={handleSearch}
-                            className='col-span-2 md:col-span-1 flex items-center justify-center gap-2 bg-brand-navy hover:bg-transparent hover:border-brand-text border-2 border-brand-navy text-white px-4 py-2.5 rounded-lg text-sm font-nunito transition-all whitespace-nowrap'
+                            className='col-span-2 md:col-span-1 flex cursor-pointer items-center justify-center gap-2 bg-brand-navy hover:bg-transparent hover:border-brand-text border-2 border-brand-navy text-white px-4 py-2.5 rounded-lg text-sm font-nunito transition-all whitespace-nowrap'
                         >
                             Search Properties
                             <Search size={16} />

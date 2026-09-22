@@ -73,11 +73,11 @@ const Navbar = () => {
             <NavOp stylesDiff={" "} />
           </div>
 
-          <div className="flex  items-center gap-2  text-brand-text">
+          <div className="flex  items-center gap-2  text-brand-text cursor-pointer">
             <Link href={'/contact'}><Button
               content={"Contact Us"}
               colors={
-                "text-brand-text hidden sm:flex hover:bg-transparent hover:[text-shadow:0_2px_4px_rgba(0,0,0,1.5)]  hover:border-brand-text bg-brand-darkGold border-brand-darkGold"
+                "text-brand-text hidden sm:flex cursor-pointer hover:bg-transparent hover:[text-shadow:0_2px_4px_rgba(0,0,0,1.5)]  hover:border-brand-text bg-brand-darkGold border-brand-darkGold"
               }
             /></Link>
             <div
