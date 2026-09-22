@@ -13,8 +13,9 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const lastScrollY = useRef(0);
   const pathname = usePathname();
+  console.log(pathname)
 
-  let isSolid = pathname === "/blogs" || pathname === "/allblogs" || pathname === "/blogin";
+  let isSolid = pathname === "/blogs" || pathname === "/allblogs" || pathname === "/blogs/1";
 
   useEffect(() => {
     const handleNav = () => {

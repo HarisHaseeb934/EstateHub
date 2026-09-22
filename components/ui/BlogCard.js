@@ -35,7 +35,7 @@ export const BlogCard = ({ blog }) => {
 
       <div>
         <a
-          href={`/blog/${blog.id}`}
+          href={`/blogs/${blog.id}`}
           className="inline-flex items-center text-xs font-semibold text-gray-900 hover:text-brand-darkGold border border-gray-200 rounded-full px-3 py-1.5 hover:border-brand-darkGold transition-all"
         >
           View Post

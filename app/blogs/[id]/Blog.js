@@ -1,5 +1,5 @@
 import MainBlog from "@/components/sections/MainBlog";
-import RightSidebar from "../../components/ui/RightSidebar";
+import RightSidebar from "@/components/ui/RightSidebar";
 
 const Blog = () => {
   return (
