@@ -64,7 +64,7 @@ export default function PropertyPage() {
       onClick={() => setView(v)}
       aria-label={label}
       aria-pressed={view === v}
-      className={`grid size-10 place-items-center rounded-md border border-[#ece9e3] dark:border-[#2d3037] ${view === v ? "bg-[#f1efea]" : ""}`}
+      className={`grid size-7 sm:size-10 place-items-center rounded-md border border-[#ece9e3] dark:border-[#2d3037] ${view === v ? "bg-[#f1efea]" : ""}`}
     >
       <svg
         viewBox="0 0 24 24"
@@ -103,7 +103,7 @@ export default function PropertyPage() {
           <div className="flex items-center gap-3 text-sm">
             <label
               htmlFor="sort"
-              className="text-[#6b6f76] dark:text-[#9a9ea6]"
+              className="text-[#6b6f76] text-[#9a9ea6] text-[11px] sm:text-base"
             >
               Sort by:
             </label>
@@ -114,7 +114,7 @@ export default function PropertyPage() {
                 setSort(e.target.value);
                 setPage(1);
               }}
-              className="h-10 rounded-md border border-[#ece9e3] bg-white px-3 outline-none"
+              className="h-7 sm:h-10 rounded-md border border-[#ece9e3] bg-white px-3 outline-none"
             >
               {SORTS.map((s) => (
                 <option key={s.value} value={s.value}>

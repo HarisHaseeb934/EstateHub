@@ -4,7 +4,7 @@ import { COUNTS, PRICE_RANGES, TYPES } from "../../app/properties/properties";
 
 const field =
   "w-full bg-transparent text-sm outline-none placeholder:text-[#9a9ea6]";
-const label = "mb-1 block text-xs text-[#6b6f76] dark:text-[#9a9ea6]";
+const label = "mb-1 block text-xs text-brand-darkGold";
 
 function Select({ id, title, value, onChange, options }) {
   return (
@@ -18,6 +18,7 @@ function Select({ id, title, value, onChange, options }) {
         onChange={(e) => onChange(e.target.value)}
         className={`${field} cursor-pointer`}
       >
+      
         {options.map((o) => (
           <option key={o} value={o} className="text-black">
             {o}
@@ -38,7 +39,7 @@ export default function SearchBar({ values, onChange, onSearch }) {
         onSearch();
       }}
       role="search"
-      className="mx-auto grid max-w-[1160px] gap-4 rounded-xl bg-white p-5 shadow-lg md:grid-cols-[1.3fr_1fr_1fr_1fr_1fr_auto] md:items-center md:divide-x md:divide-[#ece9e3] md:dark:divide-[#2d3037]"
+      className="mx-auto grid max-w-[1160px] gap-4 rounded-x bg-white p-5 shadow-lg md:grid-cols-[1.3fr_1fr_1fr_1fr_1fr_auto] text-start md:items-center sm:text-center md:divide-x md:divide-[#ece9e3] md:divide-[#2d3037]"
     >
       <div className="md:pr-5">
         <label htmlFor="loc" className={label}>
