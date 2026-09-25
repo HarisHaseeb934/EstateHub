@@ -1,6 +1,6 @@
 "use client";
 
-import { COUNTS, PRICE_RANGES, TYPES } from "./properties";
+import { COUNTS, PRICE_RANGES, TYPES } from "../../app/properties/properties";
 
 const field =
   "w-full bg-transparent text-sm outline-none placeholder:text-[#9a9ea6]";
@@ -38,7 +38,7 @@ export default function SearchBar({ values, onChange, onSearch }) {
         onSearch();
       }}
       role="search"
-      className="mx-auto grid max-w-[1160px] gap-4 rounded-xl bg-white p-5 shadow-lg dark:bg-[#1f2126] md:grid-cols-[1.3fr_1fr_1fr_1fr_1fr_auto] md:items-center md:divide-x md:divide-[#ece9e3] md:dark:divide-[#2d3037]"
+      className="mx-auto grid max-w-[1160px] gap-4 rounded-xl bg-white p-5 shadow-lg md:grid-cols-[1.3fr_1fr_1fr_1fr_1fr_auto] md:items-center md:divide-x md:divide-[#ece9e3] md:dark:divide-[#2d3037]"
     >
       <div className="md:pr-5">
         <label htmlFor="loc" className={label}>
@@ -82,7 +82,7 @@ export default function SearchBar({ values, onChange, onSearch }) {
       />
       <button
         type="submit"
-        className="h-12 rounded-md bg-[#16181d] px-8 text-sm font-medium text-white hover:bg-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b98a4e] dark:bg-[#b98a4e] dark:hover:bg-[#a67a42] md:ml-4"
+        className="h-12 rounded-md bg-[#16181d] px-8 text-sm font-medium text-white hover:bg-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b98a4e] bg-brand-darkGold dark:hover:bg-[#a67a42] md:ml-4"
       >
         Search
       </button>

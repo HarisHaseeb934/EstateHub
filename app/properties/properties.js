@@ -25,4 +25,6 @@ export const properties = [
   { id: "6", title: "Premium Apartment", type: "Apartment", location: "Clifton, Karachi", beds: 3, baths: 3, sqft: 1800, price: 45000000, image: "/properties/premium-apartment.jpg", listedAt: "2026-09-02" },
   { id: "7", title: "Designer House", type: "House", location: "DHA Phase 5, Lahore", beds: 4, baths: 5, sqft: 3500, price: 95000000, image: "/properties/designer-house.jpg", listedAt: "2026-08-28" },
   { id: "8", title: "Penthouse with Terrace", type: "Penthouse", location: "Emaar Oceanfront, Karachi", beds: 4, baths: 4, sqft: 3000, price: 75000000, image: "/properties/penthouse.jpg", listedAt: "2026-09-15" },
+  { id: "9", title: "Penthouse with Terrace", type: "Penthouse", location: "Emaar Oceanfront, Karachi", beds: 4, baths: 4, sqft: 3000, price: 75000000, image: "/properties/penthouse.jpg", listedAt: "2026-09-15" },
+  { id: "10", title: "Penthouse with Terrace", type: "Penthouse", location: "Emaar Oceanfront, Karachi", beds: 4, baths: 4, sqft: 3000, price: 75000000, image: "/properties/penthouse.jpg", listedAt: "2026-09-15" },
 ];

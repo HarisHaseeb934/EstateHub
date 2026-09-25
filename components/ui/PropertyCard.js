@@ -6,7 +6,7 @@ import { PiBedBold, PiBathtubBold, PiRulerBold } from "react-icons/pi";
 import { IoLocationOutline } from "react-icons/io5";
 import { HiHeart, HiOutlineHeart } from "react-icons/hi2";
 
-export default function PropertyCard({ property: p, onToggleSave }) {
+export default function PropertyCard({ property: p, onToggleSave, view}) {
   const [saved, setSaved] = useState(false);
 
   const toggle = () => {
@@ -15,15 +15,16 @@ export default function PropertyCard({ property: p, onToggleSave }) {
   };
 
   return (
-    <article className="overflow-hidden rounded-md border border-[#ece9e3] bg-white text-[#16181d] shadow-sm dark:shadow-none">
-      <div className="relative aspect-[16/10] bg-gradient-to-br from-[#3b3a38] to-[#8c7a62]">
+    <article className={`overflow-hidden rounded-md flex border border-[#ece9e3] bg-white text-[#16181d] shadow-sm dark:shadow-none ${view === "list"? "": ""}`}>
+      <div className={`relative ${view === "list" ? "aspect-[3/2] h-full" : "aspect-[16/10]"} bg-gradient-to-br from-[#3b3a38] to-[#8c7a62]`}>
         {p.image && (
           <Image
             src={p.image}
             alt={p.title}
             fill
-            sizes="(max-width: 640px) 100vw, 300px"
-            className="object-cover"
+            // (max-width: 640px) 100vw, 
+            // sizes="300px"
+            className={`object-cover ${view === "list"? "w-[300px]": "w-[300px]"}`}
           />
         )}
         {p.tag && (

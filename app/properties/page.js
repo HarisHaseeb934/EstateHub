@@ -2,9 +2,9 @@
 
 import { useMemo, useState } from "react";
 import { PRICE_RANGES, properties, SORTS } from "./properties";
-import Pagination from "./Pagination";
 import PropertyCard from "@/components/ui/PropertyCard";
-import SearchBar from "./SearchBar";
+import Pagination from "@/components/ui/Pagination";
+import SearchBar from "@/components/ui/SearchBar";
 
 const PAGE_SIZE = 8;
 const DEFAULTS = {
@@ -64,7 +64,7 @@ export default function PropertyPage() {
       onClick={() => setView(v)}
       aria-label={label}
       aria-pressed={view === v}
-      className={`grid size-10 place-items-center rounded-md border border-[#ece9e3] dark:border-[#2d3037] ${view === v ? "bg-[#f1efea] dark:bg-[#2d3037]" : ""}`}
+      className={`grid size-10 place-items-center rounded-md border border-[#ece9e3] dark:border-[#2d3037] ${view === v ? "bg-[#f1efea]" : ""}`}
     >
       <svg
         viewBox="0 0 24 24"
@@ -80,17 +80,17 @@ export default function PropertyPage() {
   );
 
   return (
-    <div className="min-h-screen bg-[#faf9f7] text-[#16181d] dark:bg-[#15161a] dark:text-[#f1efea]">
-      <section className="bg-gradient-to-b from-[#f1efea] to-[#faf9f7] px-5 pb-10 pt-12 text-center dark:from-[#1a1c20] dark:to-[#15161a]">
-        <h1 className="font-serif text-4xl font-medium md:text-5xl">
+    <div className="min-h-screen relative text-[#16181d]">
+      <div className="absolute bg-[url('/hero1.jpg')] opacity-90 brightness-50 inset-0 h-70"></div>
+      <section className="mt-10 bg-gradient-to-b relative z-10 px-5 pb-10 pt-12 text-center">
+        <h1 className="font-serif text-4xl font-medium md:text-5xl text-brand-gold">
           Find Your Perfect Property
         </h1>
-        <p className="mb-9 mt-3 text-[#6b6f76] dark:text-[#9a9ea6]">
+        <p className="mb-9 mt-3 text-brand-gold">
           Discover homes that match your lifestyle and budget.
         </p>
         <SearchBar values={draft} onChange={setDraft} onSearch={search} />
       </section>
-
       <main className="mx-auto max-w-[1240px] px-5 pb-16">
         <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
           <p
@@ -114,7 +114,7 @@ export default function PropertyPage() {
                 setSort(e.target.value);
                 setPage(1);
               }}
-              className="h-10 rounded-md border border-[#ece9e3] bg-white px-3 dark:border-[#2d3037] dark:bg-[#1f2126]"
+              className="h-10 rounded-md border border-[#ece9e3] bg-white px-3 outline-none"
             >
               {SORTS.map((s) => (
                 <option key={s.value} value={s.value}>
@@ -155,11 +155,11 @@ export default function PropertyPage() {
             className={
               view === "grid"
                 ? "grid grid-cols-[repeat(auto-fill,minmax(270px,1fr))] gap-5"
-                : "mx-auto grid max-w-md gap-5"
+                : "mx-auto grid gap-5"
             }
           >
             {visible.map((p) => (
-              <PropertyCard key={p.id} property={p} onToggleSave={toggleSave} />
+              <PropertyCard key={p.id} property={p} onToggleSave={toggleSave} view={view}/>
             ))}
           </div>
         )}
